@@ -42,6 +42,11 @@ userappPassportStrategy(passport);
 adminPassportStrategy(passport);
 googlePassportStrategy(passport);
 
+
+app.get('/',(req,res)=>{
+    res.send('Hello, from server!');
+
+})
 if (process.env.NODE_ENV !== 'test') {
     app.listen(port, () => {
       console.log(`your application is running on ${port}`);
